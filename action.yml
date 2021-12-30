@@ -16,5 +16,5 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.url }}
-    - ${{ inputs.key }}
+    - ${{ inputs.app_name }}
+    - ${{ inputs.env }}
