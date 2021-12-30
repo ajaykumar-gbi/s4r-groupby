@@ -1,0 +1,20 @@
+# action.yml
+name: "test"
+author: "ajay kumar"
+description: "A Github Action to see if this module works"
+branding:
+  icon: "database"
+  color: "red"
+inputs:
+  app_name:
+    description: "one of the s4r repo you want to deploy"
+    required: true
+  env:
+    description: "lower/upper"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.url }}
+    - ${{ inputs.key }}
